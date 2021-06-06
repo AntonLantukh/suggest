@@ -147,11 +147,15 @@ export const useInputHandlers = ({
             setValue(value);
             setSearchTerm(value);
 
+            if (value.length < 2) {
+                setListVisibility(false);
+            }
+
             if (value.length >= 2) {
                 await debounceOnChange({searchTerm: value});
             }
         },
-        [setValue, setSearchTerm, debounceOnChange],
+        [setValue, setSearchTerm, setListVisibility, debounceOnChange],
     );
 
     const onInputKeyDown = useCallback(

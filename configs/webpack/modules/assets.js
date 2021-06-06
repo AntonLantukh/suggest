@@ -1,3 +1,5 @@
+const {PATHS} = require('../../constants');
+
 const {REG_EXP} = require('../../constants');
 
 const getConfig = filePath => [
@@ -7,6 +9,7 @@ const getConfig = filePath => [
         generator: {
             emit: true,
             filename: `images/${filePath}`,
+            publicPath: `${PATHS.dist}/`,
         },
     },
     {
@@ -15,6 +18,7 @@ const getConfig = filePath => [
         generator: {
             emit: true,
             filename: `fonts/${filePath}`,
+            publicPath: `${PATHS.dist}/`,
         },
     },
 ];
