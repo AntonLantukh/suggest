@@ -1,10 +1,10 @@
-import React, {ChangeEvent} from 'react';
+import React, {ChangeEvent, FunctionComponent} from 'react';
 
 import Suggest from '../Suggest';
 
 import css from './style.css';
 
-const Form = () => {
+const Form: FunctionComponent = () => {
     const onSubmit = (evt: ChangeEvent<HTMLFormElement>) => evt.preventDefault();
 
     return (

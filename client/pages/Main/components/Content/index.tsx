@@ -1,9 +1,9 @@
-import React from 'react';
+import React, {FunctionComponent} from 'react';
 
 import Form from '../Form';
 import Header from '../Header';
 
-const Content = () => (
+const Content: FunctionComponent = () => (
     <div>
         <Header />
         <Form />

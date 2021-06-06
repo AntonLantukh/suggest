@@ -1,8 +1,8 @@
-import React from 'react';
+import React, {FunctionComponent} from 'react';
 
 import css from './style.css';
 
-const Header = () => (
+const Header: FunctionComponent = () => (
     <div className={css.header}>
         <div className={css.header__container}>
             <h1 className={css.header__title}>Car Hire – Search, Compare & Save</h1>
