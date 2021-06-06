@@ -5,6 +5,7 @@
     "main": "index.js",
     "scripts": {
         "prepare": "husky install && husky add .husky/pre-commit 'npx lint-staged'",
+        "heroku-prebuild": "npm install --dev",
         "lint:eslint": "eslint -c .eslintrc.json",
         "lint:types": "tsc -p tsconfig.json --pretty --noEmit --noEmitOnError",
         "lint:css": "stylelint",

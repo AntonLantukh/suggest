@@ -22,17 +22,12 @@ const CSS_LOADER = {
     },
 };
 
-const CSS_CLIENT_DEV_CONFIG = {
-    test: REG_EXP.css,
-    use: [MINI_CSS_LOADER, CSS_LOADER, POST_CSS_LOADER],
-};
-
-const CSS_CLIENT_PROD_CONFIG = {
+const CONFIG = {
     test: REG_EXP.css,
     use: [MINI_CSS_LOADER, CSS_LOADER, POST_CSS_LOADER],
 };
 
 module.exports = {
-    dev: CSS_CLIENT_DEV_CONFIG,
-    prod: CSS_CLIENT_PROD_CONFIG,
+    dev: CONFIG,
+    prod: CONFIG,
 };
