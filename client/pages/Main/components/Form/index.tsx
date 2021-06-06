@@ -8,12 +8,14 @@ const Form = () => {
     const onSubmit = (evt: ChangeEvent<HTMLFormElement>) => evt.preventDefault();
 
     return (
-        <form className={css.searchForm} onSubmit={onSubmit}>
-            <h2 className={css.searchForm__heading}>Let’s find your ideal car</h2>
-            <fieldset className={css.searchForm__location}>
-                <Suggest />
-            </fieldset>
-        </form>
+        <div className={css.searchForm}>
+            <form className={css.searchForm__container} onSubmit={onSubmit}>
+                <h2 className={css.searchForm__heading}>Let’s find your ideal car</h2>
+                <fieldset className={css.searchForm__location}>
+                    <Suggest />
+                </fieldset>
+            </form>
+        </div>
     );
 };
 

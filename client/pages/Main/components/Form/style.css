@@ -1,7 +1,11 @@
 .searchForm {
     width: 48%;
-    padding: 5%;
+}
+
+.searchForm__container {
+    padding: 4% 4% 15%;
     border-bottom: 2px solid var(--goldenGrass);
+    margin: -170px 0 0 170px;
     background-color: var(--creamCan);
     border-radius: 0;
     box-shadow: none;
@@ -16,5 +20,7 @@
 }
 
 .searchForm__location {
+    padding: 0;
     border: 0;
+    margin: 0;
 }

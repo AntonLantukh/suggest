@@ -1,0 +1,31 @@
+.header {
+    padding: 40px 0 240px;
+    background-color: var(--dodgerBlue);
+    background-image: url('./nature.jpeg');
+    background-position: center;
+}
+
+.header__container {
+    max-width: 1100px;
+    padding: 20px 0 30px;
+    margin: 0 auto;
+}
+
+.header__title {
+    width: max-content;
+    padding: 4px 15px 0;
+    background-color: var(--blumine);
+    color: var(--white);
+    font-size: 50px;
+    line-height: 65px;
+}
+
+.header__subtitle {
+    width: max-content;
+    padding: 0 15px;
+    background-color: var(--blumine);
+    color: var(--creamBrulee);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+}
