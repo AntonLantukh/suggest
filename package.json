@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "prepare": "husky install && husky add .husky/pre-commit 'npx lint-staged'",
-        "heroku-prebuild": "npm install --dev",
+        "heroku-prebuild": "npm install --dev && npm run build:client-prod",
         "lint:eslint": "eslint -c .eslintrc.json",
         "lint:types": "tsc -p tsconfig.json --pretty --noEmit --noEmitOnError",
         "lint:css": "stylelint",
@@ -17,7 +17,9 @@
         "build:client-dev": "webpack --config ./configs/webpack/client/webpack.dev.js --mode development --color",
         "build:client-prod": "webpack --config ./configs/webpack/client/webpack.prod.js --mode production --color",
         "start:client-dev": "webpack serve --config ./configs/webpack/client/webpack.dev.js --mode development --color --hot",
-        "start": "NODE_ENV=development npm run start:client-dev"
+        "start:dev": "npm run start:client-dev",
+        "start:prod": "node server/index.js",
+        "start": "npm run start:prod"
     },
     "repository": {
         "type": "git",
@@ -97,6 +99,7 @@
         "@babel/runtime-corejs3": "7.14.0",
         "@hot-loader/react-dom": "17.0.1",
         "axios": "0.21.1",
+        "express": "4.17.1",
         "react": "17.0.1",
         "react-dom": "17.0.1",
         "react-hot-loader": "4.13.0"
