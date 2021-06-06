@@ -14,9 +14,9 @@
         "test": "jest",
         "test:related": "jest --findRelatedTests",
         "coverage": "jest --coverage",
-        "build:client-dev": "webpack --config ./configs/webpack/client/webpack.dev.js --mode development --color",
-        "build:client-prod": "webpack --config ./configs/webpack/client/webpack.prod.js --mode production --color",
-        "start:client-dev": "webpack serve --config ./configs/webpack/client/webpack.dev.js --mode development --color --hot",
+        "build:client-dev": "NODE_ENV=development webpack --config ./configs/webpack/client/webpack.dev.js --mode development --color",
+        "build:client-prod": "NODE_ENV=production webpack --config ./configs/webpack/client/webpack.prod.js --mode production --color",
+        "start:client-dev": "NODE_ENV=development webpack serve --config ./configs/webpack/client/webpack.dev.js --mode development --color --hot",
         "start:dev": "npm run start:client-dev",
         "start:prod": "node server/index.js",
         "start": "npm run start:prod"
