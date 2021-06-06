@@ -14,7 +14,7 @@ const getConfig = filePath => [
         type: 'asset/resource',
         generator: {
             emit: true,
-            filename: `images/${filePath}`,
+            filename: `fonts/${filePath}`,
         },
     },
 ];

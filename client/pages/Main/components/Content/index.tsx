@@ -1,3 +1,7 @@
+import React from 'react';
+
 import Form from '../Form';
 
-export default Form;
+const Content = () => <Form />;
+
+export default Content;

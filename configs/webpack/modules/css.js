@@ -13,14 +13,6 @@ const POST_CSS_LOADER = {
     loader: 'postcss-loader',
 };
 
-const STYLE_LOADER = {
-    loader: 'style-loader',
-    options: {
-        insert: 'head',
-        injectType: 'singletonStyleTag',
-    },
-};
-
 const CSS_LOADER = {
     loader: 'css-loader',
     options: {

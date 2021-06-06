@@ -1,8 +1,8 @@
 .searchForm {
     width: 48%;
     padding: 5%;
-    border-bottom: 2px solid #dab129;
-    background-color: #f3ce56;
+    border-bottom: 2px solid var(--goldenGrass);
+    background-color: var(--creamCan);
     border-radius: 0;
     box-shadow: none;
     font-family: ubuntu, Helvetica, Arial, sans-serif;

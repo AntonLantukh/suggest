@@ -16,4 +16,7 @@ export const PLACE = {
 
     /** Station */
     S: 'Station',
+
+    /** Station */
+    T: 'Station',
 };

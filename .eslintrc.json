@@ -9,6 +9,7 @@
         "eslint:recommended",
         "plugin:react/recommended",
         "plugin:json/recommended",
+        "prettier",
         "plugin:jest/recommended",
         "plugin:prettier/recommended"
     ],
@@ -35,7 +36,8 @@
             },
             "extends": [
                 "plugin:@typescript-eslint/recommended",
-                "plugin:@typescript-eslint/recommended-requiring-type-checking"
+                "plugin:@typescript-eslint/recommended-requiring-type-checking",
+                "prettier"
             ],
             "plugins": ["prettier", "@typescript-eslint"],
             "rules": {

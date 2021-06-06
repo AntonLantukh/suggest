@@ -1,4 +1,4 @@
-import {PLACE} from '../constants';
+import {PLACE} from '../constants/location';
 
 type PlaceTypeEnum = keyof typeof PLACE;
 

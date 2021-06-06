@@ -1,29 +1,8 @@
-.App {
-    font-size: 16px;
-}
-
-.search-form {
-    width: 48%;
-    padding: 5%;
-    border-bottom: 2px solid #dab129;
-    background-color: #f3ce56;
-    border-radius: 0;
-    box-shadow: none;
-    font-family: ubuntu, Helvetica, Arial, sans-serif;
-}
-
-.search-form__heading {
-    padding-bottom: 10px;
-    margin: 0;
-    font-size: 2em;
-}
-
 .suggest {
     position: relative;
     display: flex;
     flex-direction: column;
     padding: 0;
-    border: 0;
     margin: 0;
     font-family: open sans, Helvetica, Arial, sans-serif;
 }
@@ -39,8 +18,8 @@
 .suggest__input {
     padding: 12px 8% 12px 2%;
     margin: 0;
-    background-color: #fefefe;
-    border-color: #a9a9a9;
+    background-color: var(--white);
+    border-color: var(--silverChalice);
     border-radius: 0;
     border-style: solid;
     border-width: 1px;
@@ -54,19 +33,26 @@
 }
 
 .suggest__results {
+    position: absolute;
     z-index: 100;
+    top: 70px;
+    width: 100%;
     max-height: 380px;
     padding: 0;
-    border: 1px solid #e6e6e6;
+    border: 1px solid var(--mercury);
     margin: 0;
-    background-color: #fff;
+    background-color: var(--white);
     border-radius: 4px;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 2px 2px var(--black);
     font-size: 0.875em;
     overflow-y: auto;
 }
 
-.visually-hidden {
+.suggest__results_hidden {
+    display: none;
+}
+
+.visuallyHidden {
     position: absolute;
     width: 1px;
     height: 1px;

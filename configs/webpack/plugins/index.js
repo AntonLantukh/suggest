@@ -1,11 +1,8 @@
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const HTMLInlineCSSWebpackPlugin = require('html-inline-css-webpack-plugin').default;
 
 const getCssPlugin = filename => new MiniCssExtractPlugin({filename, chunkFilename: filename});
-
-const INLINE_CSS_PLUGIN = new HTMLInlineCSSWebpackPlugin();
 
 const CLEAN_PLUGIN = new CleanWebpackPlugin({cleanStaleWebpackAssets: false});
 
