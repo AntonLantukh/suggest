@@ -11,6 +11,11 @@ const MINI_CSS_LOADER = {
 
 const POST_CSS_LOADER = {
     loader: 'postcss-loader',
+    options: {
+        postcssOptions: {
+            plugins: ['autoprefixer'],
+        },
+    },
 };
 
 const CSS_LOADER = {
