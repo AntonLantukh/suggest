@@ -1,6 +1,6 @@
 import React, {ChangeEvent, FocusEvent, KeyboardEvent, MutableRefObject, FunctionComponent} from 'react';
 
-import css from './style.css';
+import css from './style.scss';
 
 type Props = {
     value: string;

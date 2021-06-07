@@ -4,7 +4,7 @@ import {LocationRes} from 'client/api/getLocations';
 
 import {OptionContent, OptionEmpty} from '../Option';
 
-import css from './style.css';
+import css from './style.scss';
 
 type Props = {
     onOptionKeyDown: (name: string, index: number, evt: KeyboardEvent<Element>) => void;

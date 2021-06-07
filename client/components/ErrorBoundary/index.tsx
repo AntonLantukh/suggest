@@ -1,6 +1,6 @@
 import React, {Component, ErrorInfo, ReactNode} from 'react';
 
-import css from './style.css';
+import css from './style.scss';
 
 type Props = {
     children: ReactNode;

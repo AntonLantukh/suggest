@@ -2,9 +2,9 @@ import React, {FunctionComponent} from 'react';
 
 import Form from './pages/Main';
 
-import './css/reset.css';
-import './css/colors.css';
-import './css/fonts.css';
+import './css/reset.scss';
+import './css/colors.scss';
+import './css/fonts.scss';
 
 const App: FunctionComponent = () => <Form />;
 

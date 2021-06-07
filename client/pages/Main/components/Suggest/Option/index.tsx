@@ -5,7 +5,7 @@ import type {Location} from 'client/typings';
 
 import {stringify} from '../utils';
 
-import css from './style.css';
+import css from './style.scss';
 
 type BoldifierProps = {
     location: string;
@@ -16,7 +16,7 @@ export const Boldifier: FunctionComponent<BoldifierProps> = ({location, searchTe
     const regExp = new RegExp(searchTerm, 'i');
     const str = location.replace(regExp, '<b>$&</b>');
 
-    return <div dangerouslySetInnerHTML={{__html: str}} />;
+    return <span dangerouslySetInnerHTML={{__html: str}} />;
 };
 
 type OptionProps = {

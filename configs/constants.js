@@ -8,7 +8,7 @@ const PATHS = {
 const REG_EXP = {
     images: /\.(?:ico|gif|png|jpg|jpeg|svg)$/i,
     fonts: /\.(?:woff2|eot|ttf|otf)$/i,
-    css: /\.css$/,
+    css: /\.(sa|sc|c)ss$/,
     js: /\.(ts|js)x?$/,
     node_modules: /node_modules/,
 };

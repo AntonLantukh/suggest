@@ -10,7 +10,7 @@ import List from './List';
 
 import {useOptionHandlers, useInputHandlers} from './hooks';
 
-import css from './style.css';
+import css from './style.scss';
 
 const Suggest: FunctionComponent = () => {
     const listEl = useRef<HTMLUListElement>(null);
