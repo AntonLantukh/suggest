@@ -49,7 +49,7 @@ const Suggest: FunctionComponent = () => {
     return (
         <div className={css.suggest} ref={suggestEl}>
             <Input {...{inputEl, value, isPending, onInputFocus, onInputKeyDown, onInputBlur, onInputChange}} />
-            <List {...{listEl, isListVisible, result, onOptionClick, onOptionKeyDown}} />
+            <List {...{listEl, searchTerm, isListVisible, result, onOptionClick, onOptionKeyDown}} />
             <Announcement {...{numFound: result.numFound}} />
         </div>
     );

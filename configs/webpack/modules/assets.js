@@ -1,5 +1,3 @@
-const {PATHS} = require('../../constants');
-
 const {REG_EXP} = require('../../constants');
 
 const getConfig = (filePath, publicPath) => [
@@ -24,6 +22,6 @@ const getConfig = (filePath, publicPath) => [
 ];
 
 module.exports = {
-    dev: getConfig('[name][ext]', `${PATHS.dist}/`),
+    dev: getConfig('[name][ext]', '/'),
     prod: getConfig('[name].[contenthash][ext]', '/'),
 };

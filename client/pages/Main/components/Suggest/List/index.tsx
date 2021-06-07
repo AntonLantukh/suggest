@@ -11,10 +11,18 @@ type Props = {
     onOptionClick: (name: string, evt: MouseEvent<Element>) => void;
     listEl: MutableRefObject<HTMLUListElement | null>;
     result: LocationRes;
+    searchTerm: string;
     isListVisible: boolean;
 };
 
-const List: FunctionComponent<Props> = ({listEl, result, isListVisible, onOptionClick, onOptionKeyDown}: Props) => {
+const List: FunctionComponent<Props> = ({
+    listEl,
+    result,
+    searchTerm,
+    isListVisible,
+    onOptionClick,
+    onOptionKeyDown,
+}: Props) => {
     const {numFound, data} = result;
     return (
         <ul
@@ -29,7 +37,7 @@ const List: FunctionComponent<Props> = ({listEl, result, isListVisible, onOption
         >
             {numFound ? (
                 data.map((location, i) => (
-                    <OptionContent key={i} {...{index: i, location, onOptionClick, onOptionKeyDown}} />
+                    <OptionContent key={i} {...{index: i, location, searchTerm, onOptionClick, onOptionKeyDown}} />
                 ))
             ) : (
                 <OptionEmpty />

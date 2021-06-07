@@ -7,15 +7,28 @@ import {stringify} from '../utils';
 
 import css from './style.css';
 
-type Props = {
+type BoldifierProps = {
+    location: string;
+    searchTerm: string;
+};
+
+export const Boldifier: FunctionComponent<BoldifierProps> = ({location, searchTerm}: BoldifierProps) => {
+    const regExp = new RegExp(searchTerm, 'i');
+    const str = location.replace(regExp, '<b>$&</b>');
+
+    return <div dangerouslySetInnerHTML={{__html: str}} />;
+};
+
+type OptionProps = {
     onOptionKeyDown: (name: string, index: number, evt: KeyboardEvent<Element>) => void;
     onOptionClick: (name: string, evt: MouseEvent<Element>) => void;
     location: Location;
+    searchTerm: string;
     index: number;
 };
 
-export const OptionContent: FunctionComponent<Props> = memo(
-    ({location, onOptionClick, onOptionKeyDown, index}: Props) => {
+export const OptionContent: FunctionComponent<OptionProps> = memo(
+    ({location, onOptionClick, onOptionKeyDown, index, searchTerm}: OptionProps) => {
         const {country, name, isPopular, region, iata, placeType} = location;
 
         return (
@@ -33,10 +46,12 @@ export const OptionContent: FunctionComponent<Props> = memo(
                 </span>
                 <div className={css.option__container}>
                     <span className="option__name">
-                        {name}
+                        <Boldifier location={name} searchTerm={searchTerm} />
                         {iata ? ` (${iata})` : ''}
                     </span>
-                    <span className={css.option__place}>{stringify([region, country])}</span>
+                    <span className={css.option__place}>
+                        <Boldifier location={stringify([region, country])} searchTerm={searchTerm} />
+                    </span>
                 </div>
                 {isPopular && <span className={css.option__popular}>Popular</span>}
             </li>
